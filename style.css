@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    width:100%;
+    height:100vh;
+    flex-direction:column;
+    background-image: url(computer6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.navmenu{
+    border:solid 0.3rem red;
+    display:flex;
+    width:100%;
+    height:10vh;
+    background-color: black;
+    align-items:center;
+    padding:1%;
+    transform:translateY(-100px);
+}
+.menutogole{
+    border:solid 0.3rem rgba(0,0,0,0.5);
+    display:flex;
+    width:100%;
+    height:10vh;
+    background-color:rgba(230, 231, 227, 0.116);
+    align-items:center;
+    padding:1%;
+    transition: 5s;
+
+}
+ul li{
+    margin:10px;
+    font-size:30px;
+    font-weight:bold;
+    list-style:none;
+
+}
+header{
+    display:flex;
+    width:100%;
+    height:85vh;
+    position:relative;
+    
+}
+.iconeseting i{
+    color:aliceblue;
+    font-size:50px;
+    bottom: 0%;
+    /* transform: translatey(850px); */
+    cursor:pointer;
+}
+.container{
+    display: flex;
+    width:17%;
+    height:70vh;
+    border: solid 0.2rem black;
+    margin-left: 10%;
+    margin: 2%;
+    flex-direction: column;
+
+}
+.colonnetitre{
+    display: flex;
+    height:5vh;
+    width:100%;
+    border:solid red 0.2px;
+    justify-content: center;
+
+}
+.colone{
+    border:solid red 0.2px;
+    display: flex;
+    height:70vh;
+    width:100%;
+    flex-direction: column;
+}
+button{
+    background-color: #adbe99;
+    cursor:pointer;
+}
+.modale{
+    border: solid 0.4px blue;
+    display:flex;
+    width:30%;
+    height:60vh;
+    top: 0;
+    position:absolute;
+    margin:30%;
+    margin-top:5%;
+    border:solid 2rem rgba(230, 231, 227, 0.116);
+    border-radius:1rem;
+    visibility:hidden;
+    
+}
+.modalevisible{
+    border: solid 0.4px blue;
+    display:flex;
+    width:30%;
+    height:60vh;
+    top: 0;
+    position:absolute;
+    margin:30%;
+    margin-top:5%;
+    border:solid 2rem #f995a3;
+    border-radius:1rem;
+    
+}
+label{
+    display: block;
+    font-size: 2rem;
+    color: white;
+}
+input{
+    height:50px;
+    background-color: #f995a3;
+    font-size: 2rem;
+    color: white;
+}
+.story{
+    background-color: #f995a3;
+}
+.buttonAjou{
+    display: flex;
+    width: 100%;
+    height:5vh;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5vh;
+    
+}
+
+.form {
+    display: flex;
+    width:100%;
+    height:60vh;
+    flex-direction: column;
+}
+
+.divtextarea{
+    display: flex;
+    width: 100%;
+    height:10vh;
+    flex-direction: column;
+}
+.labdate{
+    display: flex;
+    width: 100%;
+    height:10vh;
+    flex-direction: column;
+    position: relative;
+}
+#clandare{
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 92%;
+    top: 45%;
+}
+.start_time{
+    display: flex;
+    width: 100%;
+    height:10vh;
+    flex-direction: column;
+    position: relative;
+}
+.end_time{
+    display: flex;
+    width: 100%;
+    height:10vh;
+    flex-direction: column;
+    position: relative;
+}
+.add_button{
+    display: flex;
+    width: 100%;
+    height:10vh;
+    flex-direction: column;
+}
+#idtime{
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 92%;
+    top: 45%;
+}
