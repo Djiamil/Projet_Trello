@@ -25,6 +25,7 @@
         <div class="modale">
             <div class="form">
                 <h3 class="info">Remplir les information de la nouvelle Tache</h3>
+                <i id="delete" class='bx bxs-message-square-x'></i>
                 <div class="divtextarea">
                     <label for="story" class="labclass">Tache</label>
                     <textarea id="story" name="story"> </textarea>
@@ -32,20 +33,20 @@
 
                 <div class="labdate">
                     <label for="date" class="labclass">date:</label>
-                    <i id="clandare" class='bx bxs-calendar'></i>
+                    <!-- <i id="clandare" class='bx bxs-calendar'></i> -->
                     <input type="date" id="date" class="inputclass" name="date">
                     
                 </div>
 
                 <div class="start_time">
                     <label for="starttime">Start Time:</label>
-                    <i id="idtime" class='bx bx-time' ></i>
+                    <!-- <i id="idtime" class='bx bx-time' ></i> -->
                     <input type="time" id="starttime" name="starttime">
                 </div>
 
                 <div class="end_time">
                     <label for="endtime">End Time:</label>
-                    <i id="idtime" class='bx bx-time' ></i>
+                    <!-- <i id="idtime" class='bx bx-time' ></i> -->
                     <input type="time" id="endtime" name="endtime" class="inputclass">
                 </div>
 
@@ -53,10 +54,9 @@
                     <button class="buttonAjou">Ajouter</button>
                 </div>
             </div>
-        </div>
     </header>
     <span class="iconeseting"><i class='bx bx-cog'></i></span>
-
+</div>
 
 
 

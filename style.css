@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     display:flex;
     width:100%;
@@ -10,7 +11,8 @@ body{
     flex-direction:column;
     background-image: url(computer6.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    position: relative;
     
 }
 .navmenu{
@@ -22,6 +24,7 @@ body{
     align-items:center;
     padding:1%;
     transform:translateY(-100px);
+    background-color:rgba(0,0,0,0.5);
 }
 .menutogole{
     border:solid 0.3rem rgba(0,0,0,0.5);
@@ -31,7 +34,7 @@ body{
     background-color:rgba(230, 231, 227, 0.116);
     align-items:center;
     padding:1%;
-    transition: 5s;
+    /* transition: 5s; */
 
 }
 ul li{
@@ -55,6 +58,14 @@ header{
     /* transform: translatey(850px); */
     cursor:pointer;
 }
+#delete{
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 90%;
+    top:0%;
+    cursor: pointer;
+}
 .container{
     display: flex;
     width:17%;
@@ -63,7 +74,21 @@ header{
     margin-left: 10%;
     margin: 2%;
     flex-direction: column;
+   
 
+}
+.container .modale{
+    display:none;
+}
+.containertoggole{
+    display: flex;
+    width:17%;
+    height:70vh;
+    border: solid 0.2rem black;
+    margin-left: 10%;
+    margin: 2%;
+    flex-direction: column;
+    visibility: hidden;
 }
 .colonnetitre{
     display: flex;
@@ -107,7 +132,7 @@ button{
     position:absolute;
     margin:30%;
     margin-top:5%;
-    border:solid 2rem #f995a3;
+    /* border:solid 2rem #f995a3; */
     border-radius:1rem;
     
 }
@@ -115,16 +140,16 @@ label{
     display: block;
     font-size: 2rem;
     color: white;
+    right: 92%;
 }
 input{
     height:50px;
-    background-color: #f995a3;
+    width: 100%;
+    /* background-color: #f995a3; */
     font-size: 2rem;
     color: white;
 }
-.story{
-    background-color: #f995a3;
-}
+
 .buttonAjou{
     display: flex;
     width: 100%;
@@ -157,13 +182,13 @@ input{
     flex-direction: column;
     position: relative;
 }
-#clandare{
+/* #clandare{
     color: white;
     font-size: 3rem;
     position: absolute;
     left: 92%;
     top: 45%;
-}
+} */
 .start_time{
     display: flex;
     width: 100%;
@@ -190,4 +215,54 @@ input{
     position: absolute;
     left: 92%;
     top: 45%;
+}
+.modaler{
+    border: solid 0.4px blue;
+    display:flex;
+    width:30%;
+    height:60vh;
+    top: 0;
+    position:absolute;
+    margin:30%;
+    margin-top:5%;
+    border:solid 2rem rgba(230, 231, 227, 0.116);
+    border-radius:1rem;
+    visibility:hidden;
+}
+.genediv{
+    border:solid blue 0.4rem;
+    display:flex;
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    position:relative;
+}
+#buttonGauche{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    /* visibility:hidden; */
+}
+/* .btgauchehidene{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+
+} */
+#buttonDroit{
+    color: white;
+    font-size: 2rem;
+    right: 0%;
+    top: 20%;
+    position: absolute;
+}
+span{
+    cursor:pointer;
+    font-size: 2rem;
+    margin:2%;
+    color: white;
 }
