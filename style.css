@@ -77,8 +77,8 @@ header{
    
 
 }
-.container .modale{
-    display:none;
+.container .colone .genediv #buttonGauche{
+    visibility: hidden;
 }
 .containertoggole{
     display: flex;
@@ -145,7 +145,7 @@ label{
 input{
     height:50px;
     width: 100%;
-    /* background-color: #f995a3; */
+    background-color: #f995a3;
     font-size: 2rem;
     color: white;
 }
@@ -182,13 +182,13 @@ input{
     flex-direction: column;
     position: relative;
 }
-/* #clandare{
+#clandare{
     color: white;
     font-size: 3rem;
     position: absolute;
     left: 92%;
     top: 45%;
-} */
+}
 .start_time{
     display: flex;
     width: 100%;
@@ -236,7 +236,34 @@ input{
     height:auto;
     margin-top:3%;
     position:relative;
+    display: flex;
+    flex-direction: column;
 }
+.divdate{
+    width:30%;
+    border:solid 0.2rem black;
+    height: 5vh;
+    margin:1%
+}
+.divstartime{
+    width:30%;
+    border:solid 0.2rem black;
+    height: 5vh;
+    margin:1%
+}
+.divantime{
+    width:30%;
+    border:solid 0.2rem black;
+    height: 5vh;
+    margin:1%;
+}
+.divdateheurtime{
+    display:flex;
+    height: 5vh;
+    width:100%;
+}
+
+
 #buttonGauche{
     color: white;
     font-size: 2rem;

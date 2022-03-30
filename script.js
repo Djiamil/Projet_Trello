@@ -1,5 +1,11 @@
 // const newcontainer = document.querySelector('newcontainer');
 const textarea = document.querySelector("textarea");
+const date = document.querySelector('#date');
+const starttime = document.querySelector("#starttime");
+const endtime = document.querySelector("#endtime");
+let datearea=date.valueAsNumber;
+let heur1=starttime.valueAsNumber;
+let heur2= endtime.valueAsNumber;
 const body = document.querySelector("body");
 const butcolone = document.querySelector(".butcolone");
 const changecolor = document.querySelector(".changecolor");
@@ -10,10 +16,11 @@ const generatenote = document.querySelector(".generatenote");
 const modale = document.querySelector(".modale");
 const buttonAjou = document.querySelector(".buttonAjou");
 const deletee = document.querySelector("#delete");
+
 let nbr = 0;
 let i = 0;
 let j = 0;
-let tabcolor = ["#734b6d", "#f4e2d8", "#904e95", "#0b486b", "#cb3066"];
+let tabcolor = ["#734b6d", "#f4e2d8", "#904e95", "#0b486b", "#cb3066","#004e92","#243B55","#FD746C","#4CA1AF","#904e95","#0B486B","#3a6073","#2196f3"];
 
 //!Les evenement des button
 buttonAjou.addEventListener("click", function () {
@@ -37,10 +44,32 @@ buttonAjou.addEventListener("click", function () {
   generediv.appendChild(mah1);
   generediv.appendChild(buttonGauche);
   generediv.appendChild(buttonDroit);
+  //!Les inpute de recupperation
+  let divdateheurtime = document.createElement('div')
+ let divdate = document.createElement('div');
+ let divstartime =document.createElement('div');
+ let divandtime= document.createElement('div');
+
+ divdate.setAttribute('class','divdate');
+ divstartime.setAttribute('class','divstartime');
+ divandtime.setAttribute('class','divantime')
+ divdateheurtime.setAttribute('class','divdateheurtime')
+ divdate.innerHTML =datearea;
+ if (heur1 < heur2){
+   divstartime.innerHTML =starttime.value;
+   divandtime.innerHTML = endtime.value;
+}else{
+  endtime.value.innerHTML ="Veiller revoire les date saisis"
+}
+ divdateheurtime.appendChild(divdate)
+ divdateheurtime.appendChild(divstartime)
+ divdateheurtime.appendChild(divandtime)
+ generediv.appendChild(divdateheurtime)
   //!evenement des deux button
 
 
 buttonDroit.addEventListener("click", function (e) {
+    buttonGauche.style.visibility="visible"
     let adeplacer= e.target.parentElement.parentElement.parentElement.id
     // console.log(buttonDroit.parentElement.parentElement.parentElement.id)
    let convertis=parseInt(adeplacer)
@@ -52,6 +81,7 @@ buttonDroit.addEventListener("click", function (e) {
     // let divcolonne = document.querySelector()
     // divcolonne.appendChild(generediv);
   });
+  //!Evenement btn gauche
   buttonGauche.addEventListener("click", function (e) {
    let adeplacer= e.target.parentElement.parentElement.parentElement.id
    let convertis=parseInt(adeplacer)
@@ -59,23 +89,26 @@ buttonDroit.addEventListener("click", function (e) {
    suivant.lastElementChild.appendChild(generediv)
   suivant.lastElementChild.appendChild(generediv)
 
-    
+   
     // let divcolonne = document.querySelector()
     // divcolonne.appendChild(generediv);
   });
 
  
 });
+//!Evenement btn delete
 
 deletee.addEventListener("click", function () {
   modale.classList.toggle("modaler");
   modale.classList.toggle("modalevisible");
 });
 butcolone.addEventListener("click", function () {
-  if (nbr < 5) {
-    header.appendChild(generatecolumn());
-    // generatecolumn();
-  }
+  let cnt = header.childElementCount
+    if(cnt < 6){
+      header.appendChild(generatecolumn());
+      refreche();
+    }
+   
 });
 iconeseting.addEventListener("click", function () {
   nav.classList.toggle("navmenu");
@@ -95,9 +128,10 @@ generatenote.addEventListener("click", function () {
   // // newcontainer.classList.toggle('newcontainer')
 });
 
-//!Les function
+//!La function qui genere la colonne
 function generatecolumn() {
   nbr++;
+
 
   //!Creation des balise
   let divcontainer = document.createElement("div");
@@ -129,6 +163,7 @@ function generatecolumn() {
      e.target.parentElement.parentElement.parentElement.remove()
       refreche();
   })
+  //!evenement editer
 
   h1.addEventListener("click", function () {
     h1.innerText = "";
@@ -144,21 +179,34 @@ function generatecolumn() {
     h1.innerHTML = iputedith.value;
   });
 
-  divcolonne.style.backgroundColor = tabcolor[i];
-  i++;
+    divcolonne.style.backgroundColor = tabcolor[i];
+    i++
+ 
 
   divcontainer.appendChild(divcolonnetitre);
   divcontainer.appendChild(divcolonne);
 
   return divcontainer;
 }
+//!la function refrech
 function refreche(){
     let containerRefrech = document.querySelectorAll('.container')
+    
     containerRefrech.forEach((element, nbr) => {
         element.firstChild.firstChild.innerHTML = "Colonne"+`${nbr+1}`;
+      
     });
-    }
-   
+  }
+  // function comparedate(){
+  // if (heur1 < heur2){
+  //   alert('ok')
+  // }else{
+  //   alert('nom')
+  // }
+
+  // }
+    
+ 
 
 // function generateNotes(){
 //     let h3 = document.createElement('h3');
